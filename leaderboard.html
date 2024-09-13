@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Общее количество баллов: {{ total_points }}</h1>
+        <ol>
+            {% for item in top_ten %}
+            <li>{{ loop.index }}. {{ item['ФИО'] }} - {{ item['сумма баллов'] }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</body>
+</html>
